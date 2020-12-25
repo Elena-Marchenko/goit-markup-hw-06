@@ -71,14 +71,14 @@
                         <d class="modal-heading">Оставьте свои данные, мы вам перезвоним</d>
                        
                         <div class="form-field">
-                            <label for="name" class="modal-form-label">Имя</label>
+                            <label for="name">Имя</label>
                             <input type="text" name="name" id="name" class="modal-form-input" autofocus>
                             <svg class="icon-form">
                                 <use href="./image/sprite.svg#icon-name"></use>
                             </svg>
                         </div>
                         <div class="form-field">
-                            <label for="tel" class="">Телефон</label>
+                            <label for="tel">Телефон</label>
                             <input type="tel" name="tel" id="tel" class="modal-form-input">
                             <svg class="icon-form">
                                 <use href="./image/sprite.svg#icon-tel"></use>
@@ -86,7 +86,7 @@
                             
                         </div>
                         <div class="form-field">
-                            <label for="mail" class="">Почта</label>
+                            <label for="mail">Почта</label>
                             <input type="email" name="mail" id="mail" class="modal-form-input">
                             <svg class="icon-form">
                                 <use href="./image/sprite.svg#icon-mail"></use>
@@ -403,7 +403,7 @@
                     </address>
                 </div>
                 <div class="footer-social">
-                    <p class="footer-headlin">присоединяйтесь</p>
+                    <b class="footer-headlin">присоединяйтесь</b>
                     <ul class="footer-list list">
                         <li class="social-list-item">
                             <a class="social-list-link link" href="#">
@@ -436,10 +436,14 @@
                     </ul>
                 </div>
                 <form class="footer-sub">
-                    <p class="heading-sub">Подпишитесь на рассылку</p>
+                    <b class="footer-headlin">Подпишитесь на рассылку</b>
                     <div class="box-sub">
-                        <textarea name="sub" id="sub" rows="8" placeholder="E-mail"></textarea>
-                        <button class="button-sub" type="submit">Подписаться</button>
+                        <input class="sub-mail" type="email" name="mail" placeholder="E-mail">
+                        <button class="button-sub" type="submit">Подписаться
+                            <svg class="icon-send" width="24px" height="24px">
+                                <use href="./image/sprite.svg#icon-modal-send"></use>
+                            </svg>
+                        </button>
                     </div>
                 </form>
             </section>
