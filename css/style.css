@@ -282,7 +282,6 @@ header .address {
   min-width: 528px;
   min-height: 581px;
 
-  margin-top: 60px;
   padding: 40px;
 
   background: #ffffff;
@@ -304,18 +303,23 @@ header .address {
 }
 
 .modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   min-width: 30px;
   min-height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
   cursor: pointer;
 
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+  transition-property: filter;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -338,6 +342,7 @@ header .address {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 12px;
 }
 
 .modal-form {
@@ -364,15 +369,28 @@ textarea {
   padding: 0;
   padding-left: 42px;
   margin-top: 4px;
+  cursor: pointer;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-form {
   position: absolute;
   bottom: 11px;
   left: 12px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+
   width: 18px;
   height: 18px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-message {
@@ -411,8 +429,7 @@ textarea {
   content: '';
   width: 16px;
   height: 15px;
-  border: 1px solid #2f303a;
-  border-radius: 2px;
+  background-image: url('../image/checkbox.svg');
   margin-right: 8px;
 }
 
@@ -438,36 +455,12 @@ textarea {
 
 .modal-policy:checked + .modal-policy-text::before {
   background-color: #2196f3;
-  background-image: url('../image/Vector.svg');
-  background-size: 11px 8px;
+  background-image: url('../image/checkbox-white.svg');
+  background-size: 16px 15px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   padding-top: 4px 3px 3px 3px;
   cursor: pointer;
-}
-
-.icon-name {
-  width: 12px;
-  height: 12px;
-  fill: #212121;
-}
-
-.icon-tel {
-  width: 13px;
-  height: 13px;
-}
-
-.icon-mail {
-  width: 15px;
-  height: 12px;
-}
-
-.icon-form {
-  width: 18px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .modal-form-input:hover,
